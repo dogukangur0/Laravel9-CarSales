@@ -3,6 +3,8 @@
 @section('title','Admin Panel')
 
 @section('content')
+    <html>
+    <body>
     <!--**********************************
             Content body start
         ***********************************-->
@@ -580,5 +582,7 @@
         Content body end
     ***********************************-->
 
+    </body>
+    </html>
 
 @endsection
