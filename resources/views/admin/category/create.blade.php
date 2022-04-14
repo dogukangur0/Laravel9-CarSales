@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Home</a></li>
                         <li class="breadcrumb-item active">Add Category</li>
                     </ol>
                 </div>
@@ -28,7 +28,7 @@
             <div class="card-header">
                 <h3 class="card-title">Category Elements</h3>
             </div>
-            <form role="form" action="/admin/category/store" method="post">
+            <form role="form" action="{{route('admin.category.create')}}" method="post">
                 @csrf
                 <div class="card-body">
 

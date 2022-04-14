@@ -13,13 +13,13 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <a href="/admin/category/edit/{{$data->id}}" class="btn btn-primary btn-app btn-info" style="width: 100px">Edit</a>
-                    <a href="/admin/category/destroy/{{$data->id}}" class="btn btn-primary btn-app btn-danger" style="width: 100px"
+                    <a href="{{route('admin.category.edit',['id'=>$data->id])}}" class="btn btn-primary btn-app btn-info" style="width: 100px">Edit</a>
+                    <a href="{{route('admin.category.destroy',['id'=>$data->id])}}" class="btn btn-primary btn-app btn-danger" style="width: 100px"
                        onclick="return confirm('Deleting !! Are you sure?')">Delete</a>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Home</a></li>
                         <li class="breadcrumb-item active">Show Category</li>
                     </ol>
                 </div>
