@@ -32,6 +32,18 @@
                 @csrf
                 <div class="card-body">
 
+                    <div class="form-group">
+                        <label>Parent Category</label>
+                        <select class="form-control" name="parent_id">
+                            <option value="0" selected="selected">Main Category</option>
+                            @foreach($datalist as $rs)
+                                <option value="{{$rs->id}}" @if($rs->id==$data->parent_id) selected="selected" @endif>
+                                    {{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs,$rs->title)}}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+
                     <div class="basic-form">
                             <label>Title</label>
                             <div class="form-group row">
