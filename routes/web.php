@@ -67,6 +67,12 @@ Route::prefix('admin')->name('admin.')->group(function() {
         Route::get('/destroy/{id}','destroy')->name(name: 'destroy');
         Route::get('/show/{id}','show')->name(name: 'show');
     });
-});
 
+    // ************** ADMİN PRODUCT IMAGE GALLERY ROUTES ************
+    Route::prefix('/image')->name('image.')->controller(\App\Http\Controllers\AdminPanel\ImageController::class)->group(function () {
+        Route::get('/{pid}','index')->name(name: 'index');
+        Route::post('/store/{pid}','store')->name(name: 'store');
+        Route::get('/destroy/{pid}/{id}','destroy')->name(name: 'destroy');
+    });
+});
 
