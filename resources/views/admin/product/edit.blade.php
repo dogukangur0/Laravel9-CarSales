@@ -2,6 +2,10 @@
 
 @section('title','Edit Product :'.$data->title)
 
+@section('head')
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+@endsection
+
 @section('content')
 
     <!--**********************************
@@ -80,7 +84,9 @@
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">Detail Information</label>
-                        <textarea class="form-control" name="detail" value="{{$data->detail}}""></textarea>
+                        <textarea class="textarea" id='detail' name="detail">
+                            {{$data->detail}}
+                        </textarea>
                     </div><br>
 
                     <div class="form-group">
@@ -108,19 +114,21 @@
                         </div>
                     </div>
 
-
-
-
-
                 </div>
             </form>
         </div>
     </section>
     </div>
+@endsection
 
+@section('foot')
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 
-
-
-
+    <script>
+        $(function (){
+            $('.textarea').summernote()
+        })
+    </script>
 
 @endsection
+
