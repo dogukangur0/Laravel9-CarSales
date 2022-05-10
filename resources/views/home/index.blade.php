@@ -20,7 +20,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="product-item">
                         <div class="text-center">
-                            <a href="car-details.html"><img src="{{Storage::url($rs->image)}}" style="width: 255px;height: 197px;text-align:center"></a>
+                            <a href="{{route('product',['id'=>$rs->id])}}"><img src="{{Storage::url($rs->image)}}" style="width: 255px;height: 197px;text-align:center"></a>
                         </div>
                         <div class="down-content">
                             <a href="car-details.html"><p2>{{$rs->title}}</p2></a>

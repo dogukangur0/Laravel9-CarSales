@@ -28,6 +28,8 @@ Route::get('/welcome', function () {
 // 3-Call Controller Function
 Route::get('/',[HomeController::class,'index'])->name(name:'home');
 
+Route::get('/product/{id}',[HomeController::class,'product'])->name(name:'product');
+
 // 4-Route-> Controller->View
 Route::get('/test',[HomeController::class,'test'])->name(name:'test');
 
@@ -36,6 +38,7 @@ Route::get('/param/{id}/{number}',[HomeController::class,'param'])->name(name:'p
 
 // 6-Route with post
 Route::post('/save',[HomeController::class,'save'])->name(name:'test');
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

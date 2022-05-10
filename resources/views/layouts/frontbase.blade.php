@@ -27,7 +27,7 @@
 @include("home.header")
 
 @section('slider')
-    @include("home.slider")
+
 @show
 
 @section('sidebar')
