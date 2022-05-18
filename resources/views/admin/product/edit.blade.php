@@ -87,6 +87,16 @@
                         <textarea class="textarea" id='detail' name="detail">
                             {{$data->detail}}
                         </textarea>
+                        <script>
+                            ClassicEditor
+                                .create( document.querySelector( '#detail' ) )
+                                .then( editor => {
+                                    console.log( editor );
+                                } )
+                                .catch( error => {
+                                    console.error( error );
+                                } );
+                        </script>
                     </div><br>
 
                     <div class="form-group">

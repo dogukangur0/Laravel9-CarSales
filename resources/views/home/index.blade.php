@@ -1,6 +1,9 @@
 @extends('layouts.frontbase')
 
-@section('title','Car Sales Project')
+@section('title',$setting->title)
+@section('description',$setting->description)
+@section('keywords',$setting->keywords)
+@section('icon',Storage::url($setting->icon))
 
 @section('slider')
     @include('home.slider')
@@ -12,7 +15,6 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <h2>Featured Cars</h2>
                         <a href="cars.html">view more <i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
@@ -23,7 +25,7 @@
                             <a href="{{route('product',['id'=>$rs->id])}}"><img src="{{Storage::url($rs->image)}}" style="width: 255px;height: 197px;text-align:center"></a>
                         </div>
                         <div class="down-content">
-                            <a href="car-details.html"><p2>{{$rs->title}}</p2></a>
+                            <a href="{{route('product',['id'=>$rs->id])}}"><p2>{{$rs->title}}</p2></a>
                             <h6><small><del>{{$rs->price}}</del></small>{{$rs->price*0.9}}</h6>
                         </div>
                     </div>
