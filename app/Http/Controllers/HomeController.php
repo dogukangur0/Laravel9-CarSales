@@ -25,6 +25,30 @@ class HomeController extends Controller
         ]);
     }
 
+    public function aboutus()
+    {
+        $setting=Setting::first();
+        return view('home.aboutus',[
+            'setting'=>$setting,
+        ]);
+    }
+
+    public function contact()
+    {
+        $setting=Setting::first();
+        return view('home.contact',[
+            'setting'=>$setting,
+        ]);
+    }
+
+    public function reference()
+    {
+        $setting=Setting::first();
+        return view('home.reference',[
+            'setting'=>$setting,
+        ]);
+    }
+
     public function product($id)
     {
         $data=Product::find($id);

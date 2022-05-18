@@ -25,9 +25,14 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-// 3-Call Controller Function
+// **** HOME PAGE ROUTES ****
 Route::get('/',[HomeController::class,'index'])->name(name:'home');
+Route::get('/aboutus',[HomeController::class,'aboutus'])->name(name:'aboutus');
+Route::get('/contact',[HomeController::class,'contact'])->name(name:'contact');
+Route::get('/reference',[HomeController::class,'reference'])->name(name:'reference');
 
+
+// *****
 Route::get('/product/{id}',[HomeController::class,'product'])->name(name:'product');
 
 // 4-Route-> Controller->View
