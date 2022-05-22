@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminPanel\AdminProductController;
+use App\Http\Controllers\AdminPanel\ImageController;
+use App\Http\Controllers\AdminPanel\MessageController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
@@ -30,6 +33,7 @@ Route::get('/',[HomeController::class,'index'])->name(name:'home');
 Route::get('/aboutus',[HomeController::class,'aboutus'])->name(name:'aboutus');
 Route::get('/contact',[HomeController::class,'contact'])->name(name:'contact');
 Route::get('/reference',[HomeController::class,'reference'])->name(name:'reference');
+Route::post('/storemessage',[HomeController::class,'storemessage'])->name(name:'storemessage');
 
 
 // *****
@@ -68,7 +72,7 @@ Route::prefix('admin')->name('admin.')->group(function() {
     });
 
     // ************** ADMİN PRODUCT ROUTES ************
-    Route::prefix('/product')->name('product.')->controller(\App\Http\Controllers\AdminPanel\AdminProductController::class)->group(function () {
+    Route::prefix('/product')->name('product.')->controller(AdminProductController::class)->group(function () {
         Route::get('/','index')->name(name: 'index');
         Route::get('/create','create')->name(name: 'create');
         Route::post('/store','store')->name(name: 'store');
@@ -79,10 +83,18 @@ Route::prefix('admin')->name('admin.')->group(function() {
     });
 
     // ************** ADMİN PRODUCT IMAGE GALLERY ROUTES ************
-    Route::prefix('/image')->name('image.')->controller(\App\Http\Controllers\AdminPanel\ImageController::class)->group(function () {
+    Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function () {
         Route::get('/{pid}','index')->name(name: 'index');
         Route::post('/store/{pid}','store')->name(name: 'store');
         Route::get('/destroy/{pid}/{id}','destroy')->name(name: 'destroy');
+    });
+
+    // ************** ADMİN MESSAGE ROUTES ************
+    Route::prefix('/message')->name('message.')->controller(MessageController::class)->group(function () {
+        Route::get('/','index')->name(name: 'index');
+        Route::get('/show/{id}','show')->name(name: 'show');
+        Route::post('/update/{id}','update')->name(name: 'update');
+        Route::get('/destroy/{id}','destroy')->name(name: 'destroy');
     });
 });
 
