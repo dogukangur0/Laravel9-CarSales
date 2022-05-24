@@ -30,6 +30,8 @@
                     <li class="nav-item"><a class="nav-link" href="{{route('aboutus')}}">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('contact')}}">Contact Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('reference')}}">References</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('faq')}}">FAQ</a></li>
+
 
                 </ul>
             </div>

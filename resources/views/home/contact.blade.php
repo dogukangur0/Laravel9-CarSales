@@ -20,6 +20,15 @@
         </div>
     </div>
 
+    <div id="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="{{route('home')}}">Home</a></li>
+                <li class="active">/Contact Us</li>
+            </ul>
+        </div>
+    </div>
+
     <div class="find-us">
         <div class="container">
             <div class="row">

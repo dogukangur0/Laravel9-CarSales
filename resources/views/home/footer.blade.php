@@ -16,6 +16,7 @@
 <script src="{{asset('assetss')}}/js/bootstrap.bundle.min.js"></script>
 
 
+
 <!-- Additional Scripts -->
 <script src="{{asset('assetss')}}/js/custom.js"></script>
 <script src="{{asset('assetss')}}/js/owl.js"></script>

@@ -21,7 +21,7 @@
             <li><a href="/admin/category" aria-expanded="false"><i class="icon icon-globe-2"></i><span class="nav-text">Categories</span></a></li>
             <li><a href="/admin/product" aria-expanded="false"><i class="icon icon-globe-2"></i><span class="nav-text">Products</span></a></li>
             <li><a href="/admin/comment" aria-expanded="false"><i class="icon icon-globe-2"></i><span class="nav-text">Comments</span></a></li>
-            <li><a href="/admin/faq" aria-expanded="false"><i class="icon icon-alert-circle-exc"></i><span class="nav-text">FAQ</span></a></li>
+            <li><a href="{{route('admin.faq.index')}}" aria-expanded="false"><i class="icon icon-alert-circle-exc"></i><span class="nav-text">FAQ</span></a></li>
             <li><a href="{{route('admin.message.index')}}" aria-expanded="false"><i class="icon icon-email-84 text-info"></i><span class="nav-text">Messages</span></a></li>
             <li><a href="/admin/user" aria-expanded="false"><i class="icon icon-users-mm-2 text-danger"></i><span class="nav-text">Users</span></a></li>
             <li><a href="/admin/social" aria-expanded="false"><i class="icon icon-globe-2"></i><span class="nav-text">Social</span></a></li>
