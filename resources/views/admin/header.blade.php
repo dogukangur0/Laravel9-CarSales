@@ -22,11 +22,12 @@
         Nav header start
     ***********************************-->
     <div class="nav-header">
-        <a href="index.html" class="brand-logo">
+        <a href="{{route('admin.index')}}" class="brand-logo">
             <img class="logo-abbr" src="{{asset('assetss')}}/admin/images/logo.png" alt="">
             <img class="logo-compact" src="{{asset('assetss')}}/admin/images/logo-text.png" alt="">
-            <img class="brand-title" src="{{asset('assetss')}}/admin/images/logo-text.png" alt="">
+            <strong class="nav-label first">My Admin Panel</strong>
         </a>
+
 
         <div class="nav-control">
             <div class="hamburger">
@@ -46,6 +47,9 @@
             <nav class="navbar navbar-expand">
                 <div class="collapse navbar-collapse justify-content-between">
                     <div class="header-left">
+                        <li class="nav-item d-none d-sm-inline-block">
+                            <a href="{{route('admin.index')}}" class="nav-link">Home</a>
+                        </li>
                         <div class="search_bar dropdown">
                                 <span class="search_icon p-3 c-pointer" data-toggle="dropdown">
                                     <i class="mdi mdi-magnify"></i>
@@ -132,7 +136,7 @@
                                     <i class="icon-envelope-open"></i>
                                     <span class="ml-2">Inbox </span>
                                 </a>
-                                <a href="./page-login.html" class="dropdown-item">
+                                <a href="/logout" class="dropdown-item">
                                     <i class="icon-key"></i>
                                     <span class="ml-2">Logout </span>
                                 </a>

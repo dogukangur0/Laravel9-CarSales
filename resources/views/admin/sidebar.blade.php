@@ -3,8 +3,16 @@
         ***********************************-->
 <div class="quixnav">
     <div class="quixnav-scroll ps ps--active-y mm-active">
+        <ul class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img class="media-object mr-3" src="{{asset('assetss')}}/admin/images/avatar/1.png" class="img-circle elevation-2">
+            </div>
+            <div class="info midtext">
+                <a href="#" class="d-block">{{Auth::user()->name}}</a>
+            </div>
+        </ul>
         <ul class="metismenu mm-show" id="menu">
-            <li class="nav-label first">Main Menu</li>
+
             <!-- <li><a href="index.html"><i class="icon icon-single-04"></i><span class="nav-text">Dashboard</span></a>
             </li> -->
             <li><a href="/admin" aria-expanded="false"><i class="fa fa-user"></i><span class="nav-text">Dashboard</span></a></li>

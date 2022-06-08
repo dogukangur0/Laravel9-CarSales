@@ -29,7 +29,7 @@
                            <div class="dropdown-menu">
                            <a href="/login" class="dropdown-item">Login</a>
                            <a href="/registeruser" class="dropdown-item">Join</a>
-                        </div>
+                           </div>
                         @endguest
                         <div class="dropdown-menu">
                             <a href="/logout" class="dropdown-item">Logout</a>
