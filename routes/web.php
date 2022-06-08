@@ -38,8 +38,9 @@ Route::get('/reference',[HomeController::class,'reference'])->name(name:'referen
 Route::post('/storemessage',[HomeController::class,'storemessage'])->name(name:'storemessage');
 Route::get('/faq',[HomeController::class,'faq'])->name(name:'faq');
 Route::post('/storecomment',[HomeController::class,'storecomment'])->name(name:'storecomment');
-
-
+Route::view('/loginuser','home.login');
+Route::view('/registeruser','home.register');
+Route::get('/logout',[HomeController::class,'logout'])->name('logout');
 // *****
 Route::get('/product/{id}',[HomeController::class,'product'])->name(name:'product');
 
