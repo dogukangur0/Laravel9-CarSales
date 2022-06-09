@@ -39,10 +39,10 @@ Route::get('/reference',[HomeController::class,'reference'])->name(name:'referen
 Route::post('/storemessage',[HomeController::class,'storemessage'])->name(name:'storemessage');
 Route::get('/faq',[HomeController::class,'faq'])->name(name:'faq');
 Route::post('/storecomment',[HomeController::class,'storecomment'])->name(name:'storecomment');
-Route::view('/loginuser','home.login');
-Route::view('/registeruser','home.register');
+Route::view('/loginuser','home.login')->name('loginuser');
+Route::view('/registeruser','home.register')->name('registeruser');
 Route::get('/logout',[HomeController::class,'logout'])->name('logout');
-Route::view('/loginadmin','admin.login');
+Route::view('/loginadmin','admin.login')->name('loginadmin');
 Route::post('/loginadmincheck',[HomeController::class,'loginadmincheck'])->name('loginadmincheck');
 
 // *****
@@ -64,7 +64,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 // ************** ADMİN PANEL ROUTES ************
-Route::prefix('admin')->name('admin.')->group(function() {
+Route::middleware('admin')->prefix('admin')->name('admin.')->group(function() {
     Route::get('/', [AdminHomeController::class, 'index'])->name(name: 'index');
     // ************** General Routes ROUTES ************
     Route::get('/setting', [AdminHomeController::class, 'setting'])->name(name: 'setting');
