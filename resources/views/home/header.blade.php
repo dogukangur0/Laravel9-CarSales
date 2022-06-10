@@ -32,6 +32,7 @@
                            </div>
                         @endguest
                         <div class="dropdown-menu">
+                            <a href="{{route('userpanel.index')}}" class="dropdown-item">My Account</a>
                             <a href="/logout" class="dropdown-item">Logout</a>
                         </div>
                     </li>
