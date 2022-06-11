@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminPanel\FaqController;
 use App\Http\Controllers\AdminPanel\ImageController;
 use App\Http\Controllers\AdminPanel\MessageController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
@@ -76,6 +77,25 @@ Route::middleware('auth')->group(function () {
         Route::get('/', 'index')->name(name: 'index');
         Route::get('/reviews', 'reviews')->name(name: 'reviews');
         Route::get('/reviewdestroy/{id}', 'reviewdestroy')->name(name: 'reviewdestroy');
+        Route::get('/addcars', 'addcars')->name(name: 'addcars');
+
+        // ************** USER PRODUCT ROUTES ************
+        Route::prefix('/product')->name('product.')->controller(ProductController::class)->group(function () {
+            Route::get('/', 'index')->name(name: 'index');
+            Route::get('/create', 'create')->name(name: 'create');
+            Route::post('/store', 'store')->name(name: 'store');
+            Route::get('/edit/{id}', 'edit')->name(name: 'edit');
+            Route::post('/update/{id}', 'update')->name(name: 'update');
+            Route::get('/destroy/{id}', 'destroy')->name(name: 'destroy');
+            Route::get('/show/{id}', 'show')->name(name: 'show');
+        });
+
+        // ************** USER PRODUCT IMAGE GALLERY ROUTES ************
+        Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function () {
+            Route::get('/{pid}', 'index')->name(name: 'index');
+            Route::post('/store/{pid}', 'store')->name(name: 'store');
+            Route::get('/destroy/{pid}/{id}', 'destroy')->name(name: 'destroy');
+        });
 
     });
 

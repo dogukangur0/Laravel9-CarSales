@@ -2,42 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Comment;
+use App\Models\Image;
 use App\Models\Product;
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
-class UserController extends Controller
+class ImageController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-
     public function index()
     {
-        return view('home.user.index');
-    }
-
-    public function reviews()
-    {
-        $comments=Comment::where('user_id','=',Auth::id())->get();
-        return view('home.user.comment',[
-           'comments'=>$comments,
-        ]);
-    }
-
-    public function addcars()
-    {
-
-       $data=Product::where('user_id','=',Auth::id())->get();
-        return view('home.user.product',[
-            'data'=>$data
-        ]);
-
+        //
     }
 
     /**
@@ -45,11 +24,14 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($pid)
     {
-        //
-
-
+        $data=Product::find($pid);
+        $images=DB::table('images')->where('pid','=',$pid)->get();
+        return view('home.user_product_image.create',[
+           'data'=>$data,
+           'images'=>$images
+        ]);
     }
 
     /**
@@ -58,9 +40,16 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$pid)
     {
-        //
+        $data=new Image();
+        $data->product_id = $pid;
+        $data->title = $request->title;
+        if($request->file('image')){
+            $data->image= $request->file('image')->store('images');
+        }
+        $data->save();
+        return redirect()->back();
     }
 
     /**
@@ -92,7 +81,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,$pid,$id)
     {
         //
     }
@@ -103,16 +92,14 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,$pid)
     {
-        //
-    }
-
-    public function reviewdestroy($id)
-    {
-        //
-        $data=Comment::find($id);
+        $data=Image::find($id);
+        if($data->image && Storage::disk('public')->exists($data->image)){
+            Storage::delete($data->image);
+        }
         $data->delete();
-        return redirect(route('userpanel.reviews'));
+        return redirect()->back();
+
     }
 }

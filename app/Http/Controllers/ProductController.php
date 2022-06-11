@@ -1,20 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\AdminPanel;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Product;
-use Carbon\Exceptions\BadComparisonUnitException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
-class AdminProductController extends Controller
+class ProductController extends Controller
 {
-    /*public static function maincategorylist()
-    {
-        return Product::where('category_id','=',0)->with('children')->get();
-    }*/
     /**
      * Display a listing of the resource.
      *
@@ -23,10 +18,11 @@ class AdminProductController extends Controller
     public function index()
     {
         //
-        $data=Product::all();
-        return view('admin.product.index',[
+       $data=Product::where('user_id','=',Auth::id())->get();
+        return view('home.user.product',[
             'data'=>$data
         ]);
+
     }
 
     /**
@@ -37,8 +33,8 @@ class AdminProductController extends Controller
     public function create()
     {
         //
-        $data=Category::all();
-        return view('admin.product.create',[
+        $data=Product::all();
+        return view('home.user.product_create',[
             'data'=>$data
         ]);
 
@@ -55,7 +51,7 @@ class AdminProductController extends Controller
         //
         $data=new Product();
         $data->category_id = $request->category_id;
-        $data->user_id =0; //$request->category_id;
+        $data->user_id =Auth::id(); //$request->category_id;
         $data->brand_id = $request->brand_id;
         $data->title = $request->title;
         $data->keywords = $request->keywords;
@@ -77,7 +73,7 @@ class AdminProductController extends Controller
             $data->image= $request->file('image')->store('images');
         }
         $data->save();
-        return redirect('admin/product');
+        return redirect('userpanel/product');
     }
 
     /**
@@ -90,7 +86,7 @@ class AdminProductController extends Controller
     {
         //
         $data=Product::find($id);
-        return view('admin.product.show',[
+        return view('home.user.product_show',[
             'data'=>$data
         ]);
     }
@@ -105,11 +101,12 @@ class AdminProductController extends Controller
     {
         //
         $data=Product::find($id);
-        $datalist=Category::all();
-        return view('admin.product.edit',[
+        $datalist=Category::with('children')->get();
+        return view('home.user.product_edit',[
             'data'=>$data,
             'datalist'=>$datalist
         ]);
+
     }
 
     /**
@@ -124,7 +121,7 @@ class AdminProductController extends Controller
         //
         $data=Product::find($id);
         $data->category_id = $request->category_id;
-        $data->user_id =0; //$request->category_id;
+        $data->user_id = Auth::id();
         $data->title = $request->title;
         $data->keywords = $request->keywords;
         $data->description = $request->description;
@@ -143,7 +140,7 @@ class AdminProductController extends Controller
             $data->image= $request->file('image')->store('images');
         }
         $data->save();
-        return redirect('admin/product');
+        return redirect('userpanel/product');
     }
 
     /**
@@ -160,6 +157,6 @@ class AdminProductController extends Controller
             Storage::delete($data->image);
         }
         $data->delete();
-        return redirect('admin/product');
+        return redirect('userpanel/product');
     }
 }
