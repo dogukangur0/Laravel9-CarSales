@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Http\Controllers\AdminPanel\AdminProductController;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,4 +19,15 @@ class Product extends Model
     {
         return $this->hasMany(Comment::class);
     }
+/*
+    public function parent()
+    {
+        return $this->belongsTo(AdminProductController::class,'category_id');
+    }
+
+    public function children()
+    {
+        return $this->hasMany(AdminProductController::class,'category_id');
+    }*/
+
 }

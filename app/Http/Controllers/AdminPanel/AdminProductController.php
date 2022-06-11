@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\Storage;
 
 class AdminProductController extends Controller
 {
+    /*public static function maincategorylist()
+    {
+        return Product::where('category_id','=',0)->with('children')->get();
+    }*/
     /**
      * Display a listing of the resource.
      *
@@ -52,14 +56,22 @@ class AdminProductController extends Controller
         $data=new Product();
         $data->category_id = $request->category_id;
         $data->user_id = 0;
+        $data->brand_id = $request->brand_id;
         $data->title = $request->title;
         $data->keywords = $request->keywords;
         $data->description = $request->description;
+        $data->series = $request->series;
+        $data->model = $request->model;
         $data->detail = $request->detail;
         $data->price = $request->price;
-        $data->quantity = $request->quantity;
-        $data->minquantity = $request->minquantity;
-        $data->tax = $request->tax;
+        $data->year = $request->year;
+        $data->fuel = $request->fuel;
+        $data->gear = $request->gear;
+        $data->km = $request->km;
+        $data->casetype = $request->casetype;
+        $data->motorpower = $request->motorpower;
+        $data->color = $request->color;
+        $data->guarantee = $request->guarantee;
         $data->status = $request->status;
         if($request->file('image')){
             $data->image= $request->file('image')->store('images');
@@ -118,9 +130,14 @@ class AdminProductController extends Controller
         $data->description = $request->description;
         $data->detail = $request->detail;
         $data->price = $request->price;
-        $data->quantity = $request->quantity;
-        $data->minquantity = $request->minquantity;
-        $data->tax = $request->tax;
+        $data->year = $request->year;
+        $data->fuel = $request->fuel;
+        $data->gear = $request->gear;
+        $data->km = $request->km;
+        $data->casetype = $request->casetype;
+        $data->motorpower = $request->motorpower;
+        $data->color = $request->color;
+        $data->guarantee = $request->guarantee;
         $data->status = $request->status;
         if($request->file('image')){
             $data->image= $request->file('image')->store('images');

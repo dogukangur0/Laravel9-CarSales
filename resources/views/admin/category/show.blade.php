@@ -38,12 +38,16 @@
                             <td>{{$data->id}}</td>
                         </tr>
                         <tr>
-                            <th>Title</th>
+                            <th>Brand</th>
                             <td>{{$data->title}}</td>
                         </tr>
                         <tr>
-                            <th>Keywords</th>
+                            <th>Series</th>
                             <td>{{$data->keywords}}</td>
+                        </tr>
+                        <tr>
+                            <th>Model</th>
+                            <td>{{$data->description}}</td>
                         </tr>
                         <tr>
                             <th>Image</th>

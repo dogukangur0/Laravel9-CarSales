@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <a href="cars.html">view more <i class="fa fa-angle-right"></i></a>
+                        <a href="{{'/cars'}}">view more <i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
                 @foreach($productlist1 as $rs)
@@ -25,8 +25,8 @@
                             <a href="{{route('product',['id'=>$rs->id])}}"><img src="{{Storage::url($rs->image)}}" style="width: 255px;height: 197px;text-align:center"></a>
                         </div>
                         <div class="down-content">
-                            <a href="{{route('product',['id'=>$rs->id])}}"><p2>{{$rs->title}}</p2></a>
-                            <h6><small><del>{{$rs->price}}</del></small>{{$rs->price*0.9}}</h6>
+                            <a href="{{route('product',['id'=>$rs->id])}}"><p2>{{$rs->title}}$</p2></a>
+                            <h6><small><del>{{$rs->price}}</del></small>{{$rs->price*0.9}}$</h6>
                         </div>
                     </div>
                 </div>

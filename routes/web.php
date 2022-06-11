@@ -34,6 +34,11 @@ Route::get('/welcome', function () {
 
 // **** HOME PAGE ROUTES ****
 Route::get('/',[HomeController::class,'index'])->name(name:'home');
+Route::get('/cars',[HomeController::class,'cars'])->name(name:'cars');
+
+Route::get('/categoryproducts/{id}/{slug}', [HomeController::class, 'categoryproducts'])->name(name: 'categoryproducts');
+
+
 Route::get('/aboutus',[HomeController::class,'aboutus'])->name(name:'aboutus');
 Route::get('/contact',[HomeController::class,'contact'])->name(name:'contact');
 Route::get('/reference',[HomeController::class,'reference'])->name(name:'reference');

@@ -60,16 +60,44 @@
                             <td>{{$data->price}}</td>
                         </tr>
                         <tr>
-                            <th>Quantity</th>
-                            <td>{{$data->quantity}}</td>
+                            <th>Series</th>
+                            <td>{{$data->series}}</td>
                         </tr>
                         <tr>
-                            <th>Minimum Quantity</th>
-                            <td>{{$data->minquantity}}</td>
+                            <th>Model</th>
+                            <td>{{$data->model}}</td>
                         </tr>
                         <tr>
-                            <th>Tax</th>
-                            <td>{{$data->tax}}</td>
+                            <th>Year</th>
+                            <td>{{$data->year}}</td>
+                        </tr>
+                        <tr>
+                            <th>Fuel</th>
+                            <td>{{$data->fuel}}</td>
+                        </tr>
+                        <tr>
+                            <th>Gear</th>
+                            <td>{{$data->gear}}</td>
+                        </tr>
+                        <tr>
+                            <th>Km</th>
+                            <td>{{$data->km}}</td>
+                        </tr>
+                        <tr>
+                            <th>Case Type</th>
+                            <td>{{$data->casetype}}</td>
+                        </tr>
+                        <tr>
+                            <th>Motor Power</th>
+                            <td>{{$data->motorpower}}</td>
+                        </tr>
+                        <tr>
+                            <th>Color</th>
+                            <td>{{$data->color}}</td>
+                        </tr>
+                        <tr>
+                            <th>Guarantee</th>
+                            <td>{{$data->guarantee}}</td>
                         </tr>
                         <tr>
                             <th>Detail Information</th>

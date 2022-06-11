@@ -32,7 +32,7 @@
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Parent Category</label>
+                        <label>Car Category</label>
                         <select class="form-control" name="parent_id">
                             <option value="0" selected="selected">Main Category</option>
                             @foreach($datalist as $rs)

@@ -12,9 +12,16 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
+
+
 class HomeController extends Controller
 {
-    //
+    public static function maincategorylist()
+    {
+        return Category::where('parent_id','=',0)->with('children')->get();
+    }
+
+
     public function index()
     {
         $page='home';
@@ -27,6 +34,26 @@ class HomeController extends Controller
             'setting'=>$setting,
             'sliderdata'=>$sliderdata,
             'productlist1'=>$productlist1
+        ]);
+    }
+
+    public function cars()
+    {
+        $productlist2=Product::limit(20)->get();
+        $setting=Setting::first();
+        return view('home.cars',[
+            'setting'=>$setting,
+            'productlist2'=>$productlist2
+        ]);
+    }
+
+    public function categoryproducts($id)
+    {
+        $category=Category::find($id);
+        $products=DB::table('products')->where('category_id',$id)->get();
+        return view('home.categoryproducts',[
+            'category'=>$category,
+            'products'=>$products
         ]);
     }
 

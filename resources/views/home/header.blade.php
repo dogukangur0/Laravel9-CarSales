@@ -14,7 +14,7 @@
                         </a>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="cars.html">Cars</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('cars')}}">Cars</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('aboutus')}}">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('contact')}}">Contact Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('reference')}}">References</a></li>

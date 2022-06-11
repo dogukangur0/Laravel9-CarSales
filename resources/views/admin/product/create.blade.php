@@ -17,12 +17,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Add Product</h1>
+                    <h1>Add Car</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Home</a></li>
-                        <li class="breadcrumb-item active">Add Product</li>
+                        <li class="breadcrumb-item active">Add Car</li>
                     </ol>
                 </div>
             </div>
@@ -30,13 +30,13 @@
 
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Product Elements</h3>
+                <h3 class="card-title">Car Elements</h3>
             </div>
             <form role="form" action="{{route('admin.product.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                     <div class="from-group" style="height: 80px">
-                        <label>Parent Product</label>
+                        <label>Parent Car</label>
                         <select class="form-control" name="category_id">
                             @foreach($data as $rs){
                                 <option value="{{$rs->id}}">{{App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs,$rs->title)}}</option>
@@ -60,23 +60,76 @@
                     </div><br>
 
                     <div class="basic-form">
+                        <label>Series</label>
+                        <input type="text" class="form-control" name="series" placeholder="Series">
+                    </div><br>
+
+                    <div class="basic-form">
+                        <label>Model</label>
+                        <input type="text" class="form-control" name="model" placeholder="Model">
+                    </div><br>
+
+                    <div class="basic-form">
                         <label>Price</label>
-                        <input type="number" class="form-control" name="price" value="0">
+                        <input type="text" class="form-control" name="price">
                     </div><br>
 
                     <div class="basic-form">
-                        <label>Quantity</label>
-                        <input type="number" class="form-control" name="quantity" value="0">
+                        <label>Year</label>
+                        <input type="number" class="form-control" name="year" value="0">
+                    </div><br>
+
+                    <div class="form-group">
+                        <label>Fuel</label>
+                        <select class="form-control" name="fuel">
+                        <option>Gasoline</option>
+                        <option>Diesel</option>
+                        <option>Gasoline&LPG</option>
+                        <option>Electric</option>
+                        </select>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label>Gear</label>
+                        <select class="form-control" name="gear">
+                        <option>Automatic</option>
+                        <option>Semi Automatic</option>
+                        <option>Manuel</option>
+                        </select>
                     </div><br>
 
                     <div class="basic-form">
-                        <label>Minimum Quantity</label>
-                        <input type="number" class="form-control" name="minquantity" value="0">
+                        <label>KM</label>
+                        <input type="number" class="form-control" name="km" value="0">
+                    </div><br>
+
+                    <div class="form-group">
+                        <label>Case Type</label>
+                        <select class="form-control" name="casetype">
+                        <option>Sedan</option>
+                        <option>Hatchback</option>
+                        <option>Station Wagon</option>
+                        <option>Cabrio</option>
+                        <option>SUV</option>
+                        </select>
                     </div><br>
 
                     <div class="basic-form">
-                        <label>Tax %</label>
-                        <input type="number" class="form-control" name="tax" value="0">
+                        <label>Motor Power</label>
+                        <input type="number" class="form-control" name="motorpower" value="0">
+                    </div><br>
+
+                    <div class="basic-form">
+                        <label>Color</label>
+                        <input type="text" class="form-control" name="color">
+                    </div><br>
+
+                    <div class="form-group">
+                        <label>Guarantee</label>
+                        <select class="form-control" name="guarantee">
+                        <option>Yes</option>
+                        <option>No</option>
+                        </select>
                     </div><br>
 
                     <div class="form-group">

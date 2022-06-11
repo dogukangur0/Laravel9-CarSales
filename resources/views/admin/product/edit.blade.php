@@ -49,37 +49,90 @@
 
                     <div class="basic-form">
                         <label>Title</label>
-                        <input type="text" class="form-control" name="title" value="{{$data->title}}">
+                        <input type="text" class="form-control" name="title" placeholder="Title">
                     </div><br>
 
                     <div class="basic-form">
                         <label>Keywords</label>
-                        <input type="text" class="form-control" name="keywords" value="{{$data->keywords}}">
+                        <input type="text" class="form-control" name="keywords" placeholder="Keywords">
                     </div><br>
 
                     <div class="basic-form">
                         <label>Description</label>
-                        <input type="text" class="form-control" name="description" value="{{$data->description}}">
+                        <input type="text" class="form-control" name="description" placeholder="Description">
+                    </div><br>
+
+                    <div class="basic-form">
+                        <label>Series</label>
+                        <input type="text" class="form-control" name="series" placeholder="Series">
+                    </div><br>
+
+                    <div class="basic-form">
+                        <label>Model</label>
+                        <input type="text" class="form-control" name="model" placeholder="Model">
                     </div><br>
 
                     <div class="basic-form">
                         <label>Price</label>
-                        <input type="number" class="form-control" name="price" value="{{$data->price}}">
+                        <input type="text" class="form-control" name="price">
                     </div><br>
 
                     <div class="basic-form">
-                        <label>Quantity</label>
-                        <input type="number" class="form-control" name="quantity" value="{{$data->quantity}}">
+                        <label>Year</label>
+                        <input type="number" class="form-control" name="year" value="0">
+                    </div><br>
+
+                    <div class="form-group">
+                        <label>Fuel</label>
+                        <select class="form-control" name="fuel">
+                            <option>Gasoline</option>
+                            <option>Diesel</option>
+                            <option>Gasoline&LPG</option>
+                            <option>Electric</option>
+                        </select>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label>Gear</label>
+                        <select class="form-control" name="gear">
+                            <option>Automatic</option>
+                            <option>Semi Automatic</option>
+                            <option>Manuel</option>
+                        </select>
                     </div><br>
 
                     <div class="basic-form">
-                        <label>Minimum Quantity</label>
-                        <input type="number" class="form-control" name="minquantity" value="{{$data->minquantity}}">
+                        <label>KM</label>
+                        <input type="number" class="form-control" name="km" value="0">
+                    </div><br>
+
+                    <div class="form-group">
+                        <label>Case Type</label>
+                        <select class="form-control" name="casetype">
+                            <option>Sedan</option>
+                            <option>Hatchback</option>
+                            <option>Station Wagon</option>
+                            <option>Cabrio</option>
+                            <option>SUV</option>
+                        </select>
                     </div><br>
 
                     <div class="basic-form">
-                        <label>Tax %</label>
-                        <input type="number" class="form-control" name="tax" value="{{$data->tax}}">
+                        <label>Motor Power</label>
+                        <input type="number" class="form-control" name="motorpower" value="0">
+                    </div><br>
+
+                    <div class="basic-form">
+                        <label>Color</label>
+                        <input type="text" class="form-control" name="color">
+                    </div><br>
+
+                    <div class="form-group">
+                        <label>Guarantee</label>
+                        <select class="form-control" name="guarantee">
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
                     </div><br>
 
                     <div class="form-group">

@@ -97,17 +97,17 @@
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                                 <div class="clearfix">
-                                    <span class="pull-left">Type</span>
+                                    <span class="pull-left">Brand</span>
 
-                                    <strong class="pull-right">Used vehicle</strong>
+                                    <strong class="pull-right">{{$data->keywords}}</strong>
                                 </div>
                             </li>
 
                             <li class="list-group-item">
                                 <div class="clearfix">
-                                    <span class="pull-left">Make</span>
+                                    <span class="pull-left">Series</span>
 
-                                    <strong class="pull-right">Lorem ipsum dolor sit</strong>
+                                    <strong class="pull-right">{{$data->description}}</strong>
                                 </div>
                             </li>
 
@@ -115,23 +115,7 @@
                                 <div class="clearfix">
                                     <span class="pull-left"> Model</span>
 
-                                    <strong class="pull-right">Lorem ipsum dolor sit</strong>
-                                </div>
-                            </li>
-
-                            <li class="list-group-item">
-                                <div class="clearfix">
-                                    <span class="pull-left">First registration</span>
-
-                                    <strong class="pull-right">05/2010</strong>
-                                </div>
-                            </li>
-
-                            <li class="list-group-item">
-                                <div class="clearfix">
-                                    <span class="pull-left">Mileage</span>
-
-                                    <strong class="pull-right">5000 km</strong>
+                                    <strong class="pull-right">{{$data->series}}</strong>
                                 </div>
                             </li>
 
@@ -139,48 +123,39 @@
                                 <div class="clearfix">
                                     <span class="pull-left">Fuel</span>
 
-                                    <strong class="pull-right">Diesel</strong>
+                                    <strong class="pull-right">{{$data->fuel}}</strong>
                                 </div>
                             </li>
 
                             <li class="list-group-item">
                                 <div class="clearfix">
-                                    <span class="pull-left">Engine size</span>
+                                    <span class="pull-left">Gear</span>
 
-                                    <strong class="pull-right">1800 cc</strong>
+                                    <strong class="pull-right">{{$data->gear}}</strong>
                                 </div>
                             </li>
 
                             <li class="list-group-item">
                                 <div class="clearfix">
-                                    <span class="pull-left">Power</span>
+                                    <span class="pull-left">KM</span>
 
-                                    <strong class="pull-right">85 hp</strong>
-                                </div>
-                            </li>
-
-
-                            <li class="list-group-item">
-                                <div class="clearfix">
-                                    <span class="pull-left">Gearbox</span>
-
-                                    <strong class="pull-right">Manual</strong>
+                                    <strong class="pull-right">{{$data->km}}</strong>
                                 </div>
                             </li>
 
                             <li class="list-group-item">
                                 <div class="clearfix">
-                                    <span class="pull-left">Number of seats</span>
+                                    <span class="pull-left">Case Type</span>
 
-                                    <strong class="pull-right">4</strong>
+                                    <strong class="pull-right">{{$data->casetype}}</strong>
                                 </div>
                             </li>
 
                             <li class="list-group-item">
                                 <div class="clearfix">
-                                    <span class="pull-left">Doors</span>
+                                    <span class="pull-left">Motor Power</span>
 
-                                    <strong class="pull-right">2/3</strong>
+                                    <strong class="pull-right">{{$data->motorpower}}</strong>
                                 </div>
                             </li>
 
@@ -188,7 +163,15 @@
                                 <div class="clearfix">
                                     <span class="pull-left">Color</span>
 
-                                    <strong class="pull-right">Black</strong>
+                                    <strong class="pull-right">{{$data->color}}</strong>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item">
+                                <div class="clearfix">
+                                    <span class="pull-left">Guarantee</span>
+
+                                    <strong class="pull-right">{{$data->guarantee}}</strong>
                                 </div>
                             </li>
                         </ul>

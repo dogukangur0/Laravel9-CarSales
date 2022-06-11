@@ -38,8 +38,19 @@
                                 <th style="width: 10px">Id</th>
                                 <th>Category</th>
                                 <th>Title</th>
+                                <th>Keywords</th>
+                                <th>Description</th>
+                                <th>Series</th>
+                                <th>Model</th>
                                 <th>Price</th>
-                                <th>Quantity</th>
+                                <th>Year</th>
+                                <th>Fuel</th>
+                                <th>Gear</th>
+                                <th>KM</th>
+                                <th>Case Type</th>
+                                <th>Motor Power</th>
+                                <th>Color</th>
+                                <th>Guarantee</th>
                                 <th>Image</th>
                                 <th>Image Gallery</th>
                                 <th>Status</th>
@@ -55,8 +66,20 @@
                                 <th>{{$rs->id}}</th>
                                 <td>{{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs->category,$rs->category->title)}}</td>
                                 <td>{{$rs->title}}</td>
+                                <td>{{$rs->keywords}}</td>
+                                <td>{{$rs->description}}</td>
+                                <td>{{$rs->series}}</td>
+                                <td>{{$rs->model}}</td>
                                 <td>{{$rs->price}}</td>
-                                <td>{{$rs->quantity}}</td>
+                                <td>{{$rs->year}}</td>
+                                <td>{{$rs->fuel}}</td>
+                                <td>{{$rs->gear}}</td>
+                                <td>{{$rs->km}}</td>
+                                <td>{{$rs->casetype}}</td>
+                                <td>{{$rs->motorpower}}</td>
+                                <td>{{$rs->color}}</td>
+                                <td>{{$rs->guarantee}}</td>
+
                                 <td>
                                     @if ($rs->image)
                                     <img src="{{Storage::url($rs->image)}}" style="height: 40px">
