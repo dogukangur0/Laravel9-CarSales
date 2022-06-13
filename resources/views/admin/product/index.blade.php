@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title','Product List')
+@section('title','Car List')
 
 @section('content')
     <!--**********************************
@@ -12,12 +12,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <a href="{{route('admin.product.create')}}" class="btn btn-primary btn-app btn-lg" style="width: 200px">Add Product</a>
+                        <a href="{{route('admin.product.create')}}" class="btn btn-primary btn-app btn-lg" style="width: 200px">Add Car</a>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Home</a></li>
-                            <li class="breadcrumb-item active">Product List</li>
+                            <li class="breadcrumb-item active">Car List</li>
                         </ol>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
         <section class="content">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Product List</h3>
+                    <h3 class="card-title">Car List</h3>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">

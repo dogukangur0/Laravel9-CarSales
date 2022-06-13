@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title','Edit Product :'.$data->title)
+@section('title','Edit Car :'.$data->title)
 
 @section('head')
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
@@ -17,12 +17,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Edit Product: {{$data->title}}</h1>
+                    <h1>Edit Car: {{$data->title}}</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Home</a></li>
-                        <li class="breadcrumb-item active">Edit Product</li>
+                        <li class="breadcrumb-item active">Edit Car</li>
                     </ol>
                 </div>
             </div>
@@ -30,14 +30,14 @@
 
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Product Elements</h3>
+                <h3 class="card-title">Car Elements</h3>
             </div>
             <form role="form" action="{{route('admin.product.update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
 
                     <div class="form-group">
-                        <label>Parent Product</label>
+                        <label>Parent Car</label>
                         <select class="form-control" name="category_id">
                             @foreach($datalist as $rs)
                                 <option value="{{$rs->id}}" @if($rs->id==$data->category_id) selected="selected" @endif>
@@ -96,7 +96,7 @@
                         <label>Gear</label>
                         <select class="form-control" name="gear">
                             <option>Automatic</option>
-                            <option>Semi Automatic</option>
+                            <option>SemiAutomatic</option>
                             <option>Manuel</option>
                         </select>
                     </div><br>
@@ -111,7 +111,7 @@
                         <select class="form-control" name="casetype">
                             <option>Sedan</option>
                             <option>Hatchback</option>
-                            <option>Station Wagon</option>
+                            <option>StationWagon</option>
                             <option>Cabrio</option>
                             <option>SUV</option>
                         </select>
@@ -162,14 +162,22 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label>Status</label>
-                        <select class="form-control" name="status">
-                            <option selected>{{$data->status}}</option>
-                            <option>True</option>
-                            <option>False</option>
-                        </select>
-                    </div>
+                    <tr>
+                        <th>Admin Note</th>
+                        <td>
+                            <form role="form" action="{{route('admin.product.edit',['id'=>$data->id])}}" method="post">
+                                @csrf
+                                <select name="status">
+                                    <option selected>{{$data->status}}</option>
+                                    <option>True</option>
+                                    <option>False</option>
+                                </select>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-primary">Update Comment</button>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
 
                     <div class="form-group row">
                         <div class="col-sm-10">

@@ -50,7 +50,6 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-content">
-                        <h4><del>$11999.00</del> <strong class="text-primary">$11779.00</strong></h4>
                         <h2>Lorem ipsum dolor sit amet</h2>
                     </div>
                 </div>
@@ -64,7 +63,7 @@
         <ul class="breadcrumb">
             <li><a href="#">Home </a></li>
             <li>-></li>
-            <li><a href="#">Product</a></li>
+            <li><a href="#">Car</a></li>
             <li>-></li>
             <li><a href="#">{{$data->category->title}}</a></li>
             <li>-></li>
@@ -83,7 +82,7 @@
                     </div>
                     @foreach($images as $rs)
                         <div class="row">
-                            <div class="col-sm-4 col-6">
+                            <div class="col-sm-5 col-6">
                                 <div>
                                     <img src="{{Storage::url($rs->image)}}" alt="" class="img-fluid">
                                 </div>
@@ -97,9 +96,17 @@
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                                 <div class="clearfix">
+                                    <span class="pull-left"> Price</span>
+
+                                    <strong class="pull-right">{{$data->price}}$</strong>
+                                </div>
+                            </li>
+
+                            <li class="list-group-item">
+                                <div class="clearfix">
                                     <span class="pull-left">Brand</span>
 
-                                    <strong class="pull-right">{{$data->keywords}}</strong>
+                                    <strong class="pull-right">{{$data->category->title}}</strong>
                                 </div>
                             </li>
 
@@ -184,7 +191,7 @@
     <div class="section">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-5">
                     <div class="section-heading">
                         <h2>Vehicle Description</h2>
                     </div>
@@ -194,7 +201,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-12">
+                <div class="col-md-7">
                     <div class="section-heading">
                         <h2>Vehicle Detail</h2>
                     </div>

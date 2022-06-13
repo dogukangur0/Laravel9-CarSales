@@ -16,14 +16,6 @@
             <!-- <li><a href="index.html"><i class="icon icon-single-04"></i><span class="nav-text">Dashboard</span></a>
             </li> -->
             <li><a href="/admin" aria-expanded="false"><i class="fa fa-user"></i><span class="nav-text">Dashboard</span></a></li>
-            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="fa fa-users"></i><span class="nav-text">Order</span></a>
-                <ul aria-expanded="false" class="mm-collapse">
-                    <li><a href="./index.html">New Orders</a></li>
-                    <li><a href="./index2.html">Accepted Orders</a></li>
-                    <li><a href="./index2.html">Shipping Orders</a></li>
-                    <li><a href="./index2.html">Completed Orders</a></li>
-                </ul>
-            </li>
 
 
             <li><a href="/admin/category" aria-expanded="false"><i class="fa fa-list-ul"></i><span class="nav-text">Categories</span></a></li>

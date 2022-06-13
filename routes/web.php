@@ -91,7 +91,7 @@ Route::middleware('auth')->group(function () {
         });
 
         // ************** USER PRODUCT IMAGE GALLERY ROUTES ************
-        Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function () {
+        Route::prefix('/image')->name('image.')->controller(App\Http\Controllers\ImageController::class)->group(function () {
             Route::get('/{pid}', 'index')->name(name: 'index');
             Route::post('/store/{pid}', 'store')->name(name: 'store');
             Route::get('/destroy/{pid}/{id}', 'destroy')->name(name: 'destroy');
@@ -172,6 +172,8 @@ Route::middleware('admin')->prefix('admin')->name('admin.')->group(function() {
         Route::post('/addrole/{id}', 'addrole')->name(name: 'addrole');
         Route::get('/destroyrole/{uid}/{rid}', 'destroyrole')->name(name: 'destroyrole');
     });
-});
-});
+
+
+});// Admin Panel Routes Group
+});// User auth. Group
 

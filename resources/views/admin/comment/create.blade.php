@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title','Add Product')
+@section('title','Add Car')
 
 @section('head')
     <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
@@ -17,12 +17,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Add Product</h1>
+                    <h1>Add Car</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Home</a></li>
-                        <li class="breadcrumb-item active">Add Product</li>
+                        <li class="breadcrumb-item active">Add Car</li>
                     </ol>
                 </div>
             </div>
@@ -30,13 +30,13 @@
 
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Product Elements</h3>
+                <h3 class="card-title">Car Elements</h3>
             </div>
             <form role="form" action="{{route('admin.product.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                     <div class="from-group" style="height: 80px">
-                        <label>Parent Product</label>
+                        <label>Parent Car</label>
                         <select class="form-control" name="category_id">
                             @foreach($data as $rs){
                                 <option value="{{$rs->id}}">{{App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs,$rs->title)}}</option>

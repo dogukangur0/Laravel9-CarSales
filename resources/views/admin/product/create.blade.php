@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title','Add Product')
+@section('title','Add Car')
 
 @section('head')
     <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
@@ -93,7 +93,7 @@
                         <label>Gear</label>
                         <select class="form-control" name="gear">
                         <option>Automatic</option>
-                        <option>Semi Automatic</option>
+                        <option>SemiAutomatic</option>
                         <option>Manuel</option>
                         </select>
                     </div><br>
@@ -108,7 +108,7 @@
                         <select class="form-control" name="casetype">
                         <option>Sedan</option>
                         <option>Hatchback</option>
-                        <option>Station Wagon</option>
+                        <option>StationWagon</option>
                         <option>Cabrio</option>
                         <option>SUV</option>
                         </select>

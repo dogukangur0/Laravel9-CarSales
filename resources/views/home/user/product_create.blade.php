@@ -170,8 +170,7 @@
                                     <div class="form-group">
                                         <label>Status</label>
                                         <select class="form-control" name="status">
-                                            <option>True</option>
-                                            <option>False</option>
+                                            <option>New</option>
                                         </select>
                                     </div><br>
 

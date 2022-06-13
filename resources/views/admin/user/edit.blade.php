@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title','Edit Product :'.$data->title)
+@section('title','Edit Car :'.$data->title)
 
 @section('head')
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
@@ -17,12 +17,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Edit Product: {{$data->title}}</h1>
+                    <h1>Edit Car: {{$data->title}}</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Home</a></li>
-                        <li class="breadcrumb-item active">Edit Product</li>
+                        <li class="breadcrumb-item active">Edit Car</li>
                     </ol>
                 </div>
             </div>
@@ -30,7 +30,7 @@
 
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Product Elements</h3>
+                <h3 class="card-title">Car Elements</h3>
             </div>
             <form role="form" action="{{route('admin.product.update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
                 @csrf

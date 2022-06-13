@@ -56,7 +56,7 @@ class AdminProductController extends Controller
         $data=new Product();
         $data->category_id = $request->category_id;
         $data->user_id =0; //$request->category_id;
-        $data->brand_id = $request->brand_id;
+        $data->brand_id = $request->category_id;
         $data->title = $request->title;
         $data->keywords = $request->keywords;
         $data->description = $request->description;

@@ -178,6 +178,7 @@
                                         <label>Status</label>
                                         <select class="form-control" name="status">
                                             <option selected>{{$data->status}}</option>
+                                            <option>New</option>
                                             <option>True</option>
                                             <option>False</option>
                                         </select>

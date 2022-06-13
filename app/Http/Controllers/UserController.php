@@ -32,13 +32,23 @@ class UserController extends Controller
 
     public function addcars()
     {
-
        $data=Product::where('user_id','=',Auth::id())->get();
-        return view('home.user.product',[
+       return view('home.user.product',[
+            'data'=>$data
+       ]);
+
+    }
+/*
+   public function image()
+    {
+        $data=Product::where('user_id','=',Auth::id())->get();
+        return view('home.user.user_product_image.create',[
             'data'=>$data
         ]);
 
     }
+*/
+
 
     /**
      * Show the form for creating a new resource.
@@ -48,7 +58,6 @@ class UserController extends Controller
     public function create()
     {
         //
-
 
     }
 

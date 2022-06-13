@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Image;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
@@ -14,9 +15,22 @@ class ImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($pid)
     {
-        //
+        $data=Product::find($pid);
+        $images=DB::table('images')->where('product_id','=',$pid)->get();
+        return view('home.user.image',[
+            'data'=>$data,
+            'images'=>$images
+        ]);
+/*
+        $product=Product::find($pid);
+        //$images=Image::where('product_id',$pid);
+        $images=DB::table('images')->where('product_id',$pid)->get();
+        return view('home.index',[
+            'product'=>$product,
+            'images'=>$images,
+        ]);*/
     }
 
     /**

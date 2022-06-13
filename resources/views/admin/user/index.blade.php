@@ -39,7 +39,6 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Role</th>
-                                <th>Status</th>
                                 <th style="width: 40px">Delete</th>
                                 <th style="width: 40px">Show</th>
                             </tr>
@@ -56,7 +55,6 @@
                                         {{$role->name}}
                                     @endforeach
                                 </td>
-                                <td></td>
                                 <td>
                                     <a href="{{route('admin.message.destroy',['id'=>$rs->id])}}" class="btn btn-primary btn-danger btn-sm"
                                     onclick="return confirm('Deleting !! Are you sure?')">

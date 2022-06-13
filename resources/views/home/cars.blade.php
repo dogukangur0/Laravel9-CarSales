@@ -33,17 +33,14 @@
                 <ul class="category-list">
                 @foreach($mainCategories as $rs)
                 <div class="dropdown side-dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">{{$rs->title}}</a>
-                    <div class="custom-menu">
-                        <div class="row">
 
-                            @if(count($rs->children))
-                                @include('home.categorytree',['children' => $rs->children])
-                            @endif
-
-                        </div>
-                        <br>
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{$rs->title}}</a>
+                    <div class="dropdown side-menu">
+                        @if(count($rs->children))
+                            @include('home.categorytree',['children' => $rs->children])
+                        @endif
                     </div>
+
                 </div>
                 @endforeach
                 </ul>
@@ -52,7 +49,7 @@
             <div class="col-md-9">
                 <div class="row">
                     @foreach($productlist2 as $rs)
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="product-item">
                             <div class="text-center">
                                 <a href="{{route('product',['id'=>$rs->id])}}"><img src="{{Storage::url($rs->image)}}" style="width: 255px;height: 197px;text-align:center"></a>
