@@ -26,7 +26,7 @@
                         </div>
                         <div class="down-content">
                             <a href="{{route('product',['id'=>$rs->id])}}"><p2>{{$rs->title}}$</p2></a>
-                            <h6><small><del>{{$rs->price}}</del></small>{{$rs->price*0.9}}$</h6>
+                            <h6>{{$rs->price}}$</h6>
                         </div>
                     </div>
                 </div>
@@ -45,14 +45,11 @@
                 </div>
                 <div class="col-md-6">
                     <div class="left-content">
-                        <p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit. Explicabo, esse consequatur alias repellat in excepturi inventore ad <a href="#">asperiores</a> tempora ipsa. Accusantium tenetur voluptate labore aperiam molestiae rerum excepturi minus in pariatur praesentium, corporis, aliquid dicta.</p>
                         <ul class="featured-list">
-                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                            <li><a href="#">Consectetur an adipisicing elit</a></li>
-                            <li><a href="#">It aquecorporis nulla aspernatur</a></li>
-                            <li><a href="#">Corporis, omnis doloremque</a></li>
-                        </ul>
-                        <a href="about-us.html" class="filled-button">Read More</a>
+                            <li>We are trying to have the most up-to-date and widest variety of cars on our site. </li>
+                            <li>click for more information</li>
+                        </ul><br><br><br><br><br><br><br>
+                        <a href="{{route('aboutus')}}" class="filled-button">Read More</a>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -80,9 +77,7 @@
                         <a href="#" class="services-item-image"><img src="{{asset('assetss')}}/images/blog-1-370x270.jpg" class="img-fluid" alt=""></a>
 
                         <div class="down-content">
-                            <h4><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit hic</a></h4>
-
-                            <p style="margin: 0;"> John Doe &nbsp;&nbsp;|&nbsp;&nbsp; 12/06/2020 10:30 &nbsp;&nbsp;|&nbsp;&nbsp; 114</p>
+                            <h4>I</h4>
                         </div>
                     </div>
                 </div>
@@ -91,9 +86,8 @@
                         <a href="#" class="services-item-image"><img src="{{asset('assetss')}}/images/blog-2-370x270.jpg" class="img-fluid" alt=""></a>
 
                         <div class="down-content">
-                            <h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h4>
+                            <h4>LOVE</h4>
 
-                            <p style="margin: 0;"> John Doe &nbsp;&nbsp;|&nbsp;&nbsp; 12/06/2020 10:30 &nbsp;&nbsp;|&nbsp;&nbsp; 114</p>
                         </div>
                     </div>
                 </div>
@@ -102,9 +96,8 @@
                         <a href="#" class="services-item-image"><img src="{{asset('assetss')}}/images/blog-3-370x270.jpg" class="img-fluid" alt=""></a>
 
                         <div class="down-content">
-                            <h4><a href="#">Aperiam modi voluptatum fuga officiis cumque</a></h4>
+                            <h4>CARS</h4>
 
-                            <p style="margin: 0;"> John Doe &nbsp;&nbsp;|&nbsp;&nbsp; 12/06/2020 10:30 &nbsp;&nbsp;|&nbsp;&nbsp; 114</p>
                         </div>
                     </div>
                 </div>
@@ -112,82 +105,6 @@
         </div>
     </div>
 
-    <div class="happy-clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-heading">
-                        <h2>Happy Clients</h2>
-
-                        <a href="testimonials.html">read more <i class="fa fa-angle-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="owl-clients owl-carousel text-center">
-                        <div class="service-item">
-                            <div class="icon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <div class="down-content">
-                                <h4>John Doe</h4>
-                                <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
-                            </div>
-                        </div>
-
-                        <div class="service-item">
-                            <div class="icon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <div class="down-content">
-                                <h4>Jane Smith</h4>
-                                <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
-                            </div>
-                        </div>
-
-                        <div class="service-item">
-                            <div class="icon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <div class="down-content">
-                                <h4>Antony Davis</h4>
-                                <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
-                            </div>
-                        </div>
-
-                        <div class="service-item">
-                            <div class="icon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <div class="down-content">
-                                <h4>John Doe</h4>
-                                <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
-                            </div>
-                        </div>
-
-                        <div class="service-item">
-                            <div class="icon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <div class="down-content">
-                                <h4>Jane Smith</h4>
-                                <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
-                            </div>
-                        </div>
-
-                        <div class="service-item">
-                            <div class="icon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                            <div class="down-content">
-                                <h4>Antony Davis</h4>
-                                <p class="n-m"><em>"Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat."</em></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <div class="call-to-action">
@@ -197,11 +114,10 @@
                     <div class="inner-content">
                         <div class="row">
                             <div class="col-md-8">
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque corporis amet elite author nulla.</p>
+                                <h4>You can ask your questions by clicking here</h4>
                             </div>
                             <div class="col-lg-4 col-md-6 text-right">
-                                <a href="contact.html" class="filled-button">Contact Us</a>
+                                <a href="{{route('contact')}}" class="filled-button">Contact Us</a>
                             </div>
                         </div>
                     </div>

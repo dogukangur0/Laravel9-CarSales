@@ -56,7 +56,7 @@
                             </div>
                             <div class="down-content">
                                 <a href="{{route('product',['id'=>$rs->id])}}"><h4>{{$rs->keywords}}</h4></a>
-                                <h6><small><del>{{$rs->price}}</del></small>{{$rs->price*0.9}}$</h6>
+                                <h6>{{$rs->price}}$</h6>
                             </div>
                         </div>
                     </div>

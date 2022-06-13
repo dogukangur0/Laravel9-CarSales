@@ -4,6 +4,9 @@
             <div class="col-md-12">
                 <div class="inner-content">
                     <p>Follow Our Social Media Accounts</p>
+                    <a href="https://www.instagram.com/">Instagram</a>
+                    <a href="https://www.facebook.com/">Facebook</a>
+                    <a href="https://www.youtube.com/">Youtube</a>
                 </div>
             </div>
         </div>
